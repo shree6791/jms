@@ -1,5 +1,6 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
 
 const FinalCTA: React.FC = () => {
   const [ref, inView] = useInView({
@@ -29,9 +30,9 @@ const FinalCTA: React.FC = () => {
           <p className="text-lg md:text-xl mb-10 opacity-90">
             Take the first step toward your modeling career. Join our next intake and transform your passion into profession.
           </p>
-          <button className="btn btn-primary text-lg">
+          <Link to="/contact" className="btn btn-primary text-lg">
             Enroll Now
-          </button>
+          </Link>
         </div>
       </div>
     </section>

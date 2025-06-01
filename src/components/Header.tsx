@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Instagram, Facebook, Youtube, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
 
 const Header: React.FC = () => {
@@ -17,6 +17,16 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Scroll to top when location changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  const handleNavClick = () => {
+    setMobileMenuOpen(false);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -24,31 +34,48 @@ const Header: React.FC = () => {
       }`}
     >
       <div className="container-custom flex items-center justify-between">
-        <Link to="/" className="flex-shrink-0">
+        <Link to="/" onClick={handleNavClick} className="flex-shrink-0">
           <Logo />
         </Link>
         
-        <nav className="hidden md:flex items-center justify-center space-x-8">
-          <Link to="/" className={`font-medium hover:text-red transition-colors ${location.pathname === '/' ? 'text-red' : ''}`}>Home</Link>
-          <Link to="/about" className={`font-medium hover:text-red transition-colors ${location.pathname === '/about' ? 'text-red' : ''}`}>About Us</Link>
-          <Link to="/services" className="font-medium hover:text-red transition-colors">Services</Link>
-          <Link to="/contact" className="font-medium hover:text-red transition-colors">Contact</Link>
+        <nav className="hidden md:flex items-center space-x-8">
+          <Link 
+            to="/" 
+            onClick={handleNavClick}
+            className={`font-medium transition-colors ${
+              location.pathname === '/' ? 'text-red' : 'text-black hover:text-red'
+            }`}
+          >
+            Home
+          </Link>
+          <Link 
+            to="/about"
+            onClick={handleNavClick}
+            className={`font-medium transition-colors ${
+              location.pathname === '/about' ? 'text-red' : 'text-black hover:text-red'
+            }`}
+          >
+            About Us
+          </Link>
+          <Link 
+            to="/services"
+            onClick={handleNavClick}
+            className={`font-medium transition-colors ${
+              location.pathname === '/services' ? 'text-red' : 'text-black hover:text-red'
+            }`}
+          >
+            Services
+          </Link>
+          <Link 
+            to="/contact"
+            onClick={handleNavClick}
+            className={`font-medium transition-colors ${
+              location.pathname === '/contact' ? 'text-red' : 'text-black hover:text-red'
+            }`}
+          >
+            Contact
+          </Link>
         </nav>
-        
-        <div className="hidden md:flex items-center space-x-6">
-          <p className="text-sm italic font-heading">Let Your Talent Shine</p>
-          <div className="flex space-x-4">
-            <a href="https://instagram.com/joshley_models" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <Instagram className="social-icon" />
-            </a>
-            <a href="https://facebook.com/joshleymodels" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <Facebook className="social-icon" />
-            </a>
-            <a href="https://youtube.com/@joshleymodelschool" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-              <Youtube className="social-icon" />
-            </a>
-          </div>
-        </div>
         
         <button 
           className="md:hidden text-black hover:text-red transition-colors"
@@ -62,26 +89,43 @@ const Header: React.FC = () => {
       <div className={`md:hidden ${mobileMenuOpen ? 'block' : 'hidden'} bg-white`}>
         <div className="container-custom py-4">
           <nav className="flex flex-col space-y-4">
-            <Link to="/" className="font-medium hover:text-red transition-colors py-2">Home</Link>
-            <Link to="/about" className="font-medium hover:text-red transition-colors py-2">About Us</Link>
-            <Link to="/services" className="font-medium hover:text-red transition-colors py-2">Services</Link>
-            <Link to="/contact" className="font-medium hover:text-red transition-colors py-2">Contact</Link>
+            <Link 
+              to="/"
+              onClick={handleNavClick}
+              className={`font-medium transition-colors py-2 ${
+                location.pathname === '/' ? 'text-red' : 'text-black hover:text-red'
+              }`}
+            >
+              Home
+            </Link>
+            <Link 
+              to="/about"
+              onClick={handleNavClick}
+              className={`font-medium transition-colors py-2 ${
+                location.pathname === '/about' ? 'text-red' : 'text-black hover:text-red'
+              }`}
+            >
+              About Us
+            </Link>
+            <Link 
+              to="/services"
+              onClick={handleNavClick}
+              className={`font-medium transition-colors py-2 ${
+                location.pathname === '/services' ? 'text-red' : 'text-black hover:text-red'
+              }`}
+            >
+              Services
+            </Link>
+            <Link 
+              to="/contact"
+              onClick={handleNavClick}
+              className={`font-medium transition-colors py-2 ${
+                location.pathname === '/contact' ? 'text-red' : 'text-black hover:text-red'
+              }`}
+            >
+              Contact
+            </Link>
           </nav>
-          
-          <div className="mt-6 flex items-center justify-between">
-            <p className="text-sm italic font-heading">Let Your Talent Shine</p>
-            <div className="flex space-x-4">
-              <a href="https://instagram.com/joshley_models" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <Instagram className="social-icon" />
-              </a>
-              <a href="https://facebook.com/joshleymodels" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <Facebook className="social-icon" />
-              </a>
-              <a href="https://youtube.com/@joshleymodelschool" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                <Youtube className="social-icon" />
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </header>

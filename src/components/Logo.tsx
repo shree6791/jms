@@ -1,11 +1,13 @@
 import React from 'react';
-import { Sparkles } from 'lucide-react';
 
 const Logo: React.FC = () => {
   return (
-    <a href="#" className="flex items-center space-x-2 group">
-      <Sparkles size={28} className="text-red group-hover:text-black transition-colors duration-300" />
-      <span className="text-xl font-heading font-bold tracking-wide">JMS</span>
+    <a href="/" className="flex items-center group">
+      <img 
+        src="/JMS_Logo.jpg" 
+        alt="Joshley Modelling School Logo" 
+        className="h-12 w-12 object-cover rounded-full transition-transform duration-300 group-hover:scale-105"
+      />
     </a>
   );
 };

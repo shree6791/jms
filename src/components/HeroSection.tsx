@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const HeroSection: React.FC = () => {
   return (
@@ -7,8 +8,8 @@ const HeroSection: React.FC = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.pexels.com/photos/7952389/pexels-photo-7952389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-          alt="Confident model walking on runway" 
+          src="/HP_BG-min.jpg" 
+          alt="Fashion model in elegant pose" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -27,9 +28,9 @@ const HeroSection: React.FC = () => {
           <p className="text-xl md:text-2xl font-heading italic mb-10">
             Where confidence meets the catwalk.
           </p>
-          <button className="btn btn-primary text-lg">
+          <Link to="/contact" className="btn btn-primary text-lg">
             Enroll Now
-          </button>
+          </Link>
         </motion.div>
       </div>
       

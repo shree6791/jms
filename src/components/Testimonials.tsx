@@ -1,5 +1,6 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
+import { Quote } from 'lucide-react';
 
 interface TestimonialProps {
   quote: string;
@@ -18,22 +19,27 @@ const TestimonialCard: React.FC<TestimonialProps> = ({ quote, name, title, image
   return (
     <div 
       ref={ref}
-      className={`bg-white p-8 shadow-md transition-all duration-700 delay-${delay} fade-in ${inView ? 'visible' : ''}`}
+      className={`bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-500 group ${inView ? 'visible' : ''}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-        <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
-          <img src={image} alt={name} className="w-full h-full object-cover" />
+      {/* Quote Section */}
+      <div className="relative mb-8">
+        <Quote className="absolute -top-4 -left-4 w-8 h-8 text-red/20 transform rotate-180 transition-transform duration-500 group-hover:scale-125" />
+        <p className="font-quote italic text-lg leading-relaxed pt-4">{quote}</p>
+      </div>
+
+      {/* Author Section */}
+      <div className="grid grid-cols-2 items-center gap-6 pt-6 border-t border-gray-100">
+        <div className="w-24 h-24 rounded-full overflow-hidden transform transition-transform duration-500 group-hover:scale-105">
+          <img 
+            src={image} 
+            alt={name} 
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+          />
         </div>
-        <div>
-          <p className="font-quote italic text-lg mb-4">{quote}</p>
-          <div className="flex items-center">
-            <div className="w-10 h-0.5 bg-red mr-3"></div>
-            <div>
-              <p className="font-semibold">{name}</p>
-              <p className="text-sm text-gray-600">{title}</p>
-            </div>
-          </div>
+        <div className="transform transition-all duration-500 group-hover:translate-x-2">
+          <p className="font-heading font-semibold text-lg group-hover:text-red transition-colors duration-500">{name}</p>
+          <p className="text-gray-600">{title}</p>
         </div>
       </div>
     </div>

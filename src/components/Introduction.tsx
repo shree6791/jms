@@ -20,15 +20,15 @@ const Introduction: React.FC = () => {
           </p>
           
           <div className="grid md:grid-cols-2 gap-12">
-            <div className="text-left">
+            <div className="text-center">
               <h3 className="text-xl font-heading font-medium mb-4">Our Mission</h3>
-              <p className="text-base leading-relaxed">
+              <p className="text-base leading-relaxed text-justify">
                 We empower aspiring models with the skills, knowledge, and confidence needed to succeed in the competitive fashion industry. Through personalized training and mentorship, we help you discover your unique potential and transform it into a successful modeling career.
               </p>
             </div>
-            <div className="text-left">
+            <div className="text-center">
               <h3 className="text-xl font-heading font-medium mb-4">Our Approach</h3>
-              <p className="text-base leading-relaxed">
+              <p className="text-base leading-relaxed text-justify">
                 Our curriculum combines technical training with personal development. From perfecting your runway walk to building a standout portfolio, we provide comprehensive education in all aspects of modeling while nurturing your individual style and presence.
               </p>
             </div>
