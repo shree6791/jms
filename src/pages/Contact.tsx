@@ -100,7 +100,7 @@ const Contact: React.FC = () => {
                       name="phone"
                       required
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-red focus:ring-1 focus:ring-red outline-none transition-colors"
-                      placeholder="(408) 420-6203"
+                      placeholder="+1 (408) 420-6203"
                     />
                   </div>
 
@@ -160,7 +160,7 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <p className="text-sm text-gray-600 mb-1">Phone</p>
-                      <p className="font-medium">408-420-6203</p>
+                      <p className="font-medium">+1 (408) 420-6203</p>
                     </div>
                   </div>
 

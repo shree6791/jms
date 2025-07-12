@@ -165,7 +165,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Team Section */}
-      <section className="section-padding bg-gray-50">
+      {/* <section className="section-padding bg-gray-50">
         <div 
           ref={teamRef}
           className={`container-custom fade-in ${teamInView ? 'visible' : ''}`}
@@ -190,7 +190,7 @@ const About: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 };

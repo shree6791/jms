@@ -14,21 +14,21 @@ const LatestNews: React.FC = () => {
       date: "July 15-30, 2025",
       location: "Los Angeles Studio",
       description: "Two-week intensive training covering runway, photoshoot, and personal branding.",
-      image: "/HP_BG-min.jpg"
+      image: "/Heydi_BG.jpg"
     },
     {
       title: "JMS Annual Fashion Show",
       date: "August 20, 2025",
       location: "LA Fashion District",
       description: "Showcase featuring our top students and alumni in collaboration with leading designers.",
-      image: "/Runway Model-min.jpg"
+      image: "/Runway_Model.jpg"
     },
     {
       title: "International Model Scout Visit",
       date: "September 5, 2025",
       location: "JMS Main Campus",
       description: "Exclusive opportunity to meet and audition for international modeling agencies.",
-      image: "/Print Modelling-min.jpg"
+      image: "/Print_Modelling.jpg"
     }
   ];
 
