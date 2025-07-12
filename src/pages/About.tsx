@@ -148,7 +148,7 @@ const About: React.FC = () => {
           <div className="text-center mb-12">
             <div className="relative mb-8 overflow-hidden group">
               <img
-                src="/Heydi-min.jpg"
+                src="/Heydi.jpg"
                 alt="Heydi Robledo"
                 className="w-full max-w-2xl mx-auto transition-transform duration-500 group-hover:scale-105"
               />

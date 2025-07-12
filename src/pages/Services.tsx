@@ -83,7 +83,7 @@ const Services: React.FC = () => {
             title="Auto Makeup"
             description="Master the art of quick, professional makeup application essential for auditions and camera work. Our comprehensive training emphasizes grooming techniques, building confidence, and developing self-reliance in creating camera-ready looks."
             icon={<Brush />}
-            image="/Auto Make Up-min.jpg"
+            image="/Auto_Make_Up.jpg"
             delay={100}
           />
           
@@ -100,7 +100,7 @@ const Services: React.FC = () => {
             title="Print Modeling"
             description="Master the techniques of catalog, editorial, and still-based work. Focus on subtle body positioning and storytelling through posture to create compelling images that capture attention."
             icon={<Book />}
-            image="/Print Modelling-min.jpg"
+            image="/Print_Modelling.jpg"
             delay={300}
           />
           
@@ -117,7 +117,7 @@ const Services: React.FC = () => {
             title="Beauty Pageant Prep"
             description="Elevate your stage presence with our specialized pageant preparation program. Focus on perfecting poise, posture, walking techniques, and Q&A delivery. Our training builds the confidence and elegance needed to shine in competitions."
             icon={<Crown />}
-            image="/Beauty Pageant-min.jpg"
+            image="/Beauty_Pageant.jpg"
             delay={500}
           />
           
@@ -125,7 +125,7 @@ const Services: React.FC = () => {
             title="Runway Model"
             description="Perfect your runway presence with comprehensive training in turns, posture, walking rhythm, and stage confidence. Course culminates in a mock runway show to showcase your new skills."
             icon={<Footprints />}
-            image="/Runway Model-min.jpg"
+            image="/Runway_Model.jpg"
             isReversed
             delay={600}
           />

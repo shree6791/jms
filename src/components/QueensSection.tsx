@@ -50,29 +50,39 @@ const QueensSection: React.FC = () => {
 
   const queens = [
     {
-      image: '/Queens - 1-min.jpg',
-      name: 'Berenice Gutierrez',
-      title: 'Miss Elegance 2023'
-    },
-    {
-      image: '/Queens - 2-min.jpg',
-      name: 'Alexia Flores',
+      image: '/Queens_Alexa_Flores.jpg',
+      name: 'Alexa Flores',
       title: 'Queen Ambassador Maytorena 2023'
     },
     {
-      image: '/Queens - 3-min.jpg',
-      name: 'Tiffany Antonio',
-      title: 'Miss Popular 2023'
+      image: '/Queens_Berenice_Gutiérrez.jpg',
+      name: 'Berenice Gutiérrez',
+      title: 'MX Universal  1st Runner Up San Francisco 2023'
     },
     {
-      image: '/Queens - 4-min.jpg',
-      name: 'Samhara Vela',
-      title: 'Miss Princesa 2023'
+      image: '/Queens_Cynthia_Zaragoza_Diaz.jpg',
+      name: 'Cynthia Zaragoza Diaz',
+      title: 'Miss Princess Quince Expo Sacramento 2023'
     },
     {
-      image: '/Queens - 5-min.jpg',
+      image: '/Queens_Missell_Rodas.jpg',
       name: 'Missell Rodas',
       title: 'Miss USA 2023'
+    },
+    {
+      image: '/Queens_Samantha_González.jpg',
+      name: 'Samantha González',
+      title: 'Miss Princess Quinceañera Expo Outlet 2023'
+    },
+    {
+      image: '/Queens_Samhara_Vela.jpg',
+      name: 'Samhara Vela',
+      title: 'Miss Teen Petite California  MX 2025'
+    },
+    {
+      image: '/Queens_Tiffany_Antonio.jpg',
+      name: 'Tiffany Antonio',
+      title: 'USA Teen West Coast Petite 2024'
     }
   ];
 

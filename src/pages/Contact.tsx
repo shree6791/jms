@@ -24,8 +24,8 @@ const Contact: React.FC = () => {
   };
 
   const businessHours = [
-    { days: 'Monday - Friday', hours: '10 AM–8 PM' },
-    { days: 'Saturday - Sunday', hours: '10 AM–1 PM' }
+    { days: 'Friday', hours: '4:30 PM – 6 PM' },
+    { days: 'Sunday', hours: '12:30 PM – 2 PM' }
   ];
 
   return (
@@ -170,7 +170,7 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <p className="text-sm text-gray-600 mb-1">Email</p>
-                      <p className="font-medium">joshleymodellingschool@gmail.com</p>
+                      <p className="font-medium">joshleymodellingschoolus@gmail.com</p>
                     </div>
                   </div>
 
